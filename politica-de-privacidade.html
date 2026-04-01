@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade — Inteligentte Lab</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --accent: #16213e;
+            --highlight: #0f3460;
+            --text: #2d2d3a;
+            --text-light: #6b6b7b;
+            --bg: #fafafa;
+            --card-bg: #ffffff;
+            --border: #e8e8ee;
+            --green: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, rgba(15, 52, 96, 0.4) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .header .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.4rem;
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+        }
+
+        .header .subtitle {
+            font-size: 0.95rem;
+            opacity: 0.7;
+            font-weight: 400;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #6ee7b7;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--green);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
+        }
+
+        .toc {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .toc h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .toc ol {
+            padding-left: 1.2rem;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: var(--highlight);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--green);
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .section h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .section ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section li {
+            margin-bottom: 0.4rem;
+            color: var(--text);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid var(--highlight);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-weight: 500;
+            color: var(--accent);
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-item .icon {
+            width: 32px;
+            height: 32px;
+            background: var(--bg);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: var(--primary);
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+        }
+
+        .footer strong {
+            color: rgba(255,255,255,0.8);
+        }
+
+        a {
+            color: var(--highlight);
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.8rem; }
+            .container { padding: 1.5rem 1rem 3rem; }
+            .toc, .contact-card { padding: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-content">
+        <div class="badge">Conforme LGPD</div>
+        <div class="logo">Inteligentte Lab</div>
+        <h1>Política de Privacidade</h1>
+        <p class="subtitle">Última atualização: 01 de abril de 2026</p>
+    </div>
+</header>
+
+<div class="container">
+
+    <nav class="toc">
+        <h2>Índice</h2>
+        <ol>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#dados-coletados">Dados Coletados</a></li>
+            <li><a href="#uso-dados">Como Utilizamos os Dados</a></li>
+            <li><a href="#whatsapp">Uso do WhatsApp Business API</a></li>
+            <li><a href="#compartilhamento">Compartilhamento de Dados</a></li>
+            <li><a href="#armazenamento">Armazenamento e Segurança</a></li>
+            <li><a href="#direitos">Seus Direitos (LGPD)</a></li>
+            <li><a href="#cookies">Cookies</a></li>
+            <li><a href="#alteracoes">Alterações nesta Política</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ol>
+    </nav>
+
+    <section class="section" id="introducao">
+        <h2>1. Introdução</h2>
+        <p>A <strong>INTELIGENTTE LAB LTDA</strong>, pessoa jurídica de direito privado, inscrita no CNPJ sob o nº <strong>65.511.795/0001-48</strong>, com sede na Av. Pres. Nilo Peçanha, 614 – Sala 104 – Bessa, João Pessoa – PB, CEP 58035-200, está comprometida com a proteção da privacidade e dos dados pessoais de seus clientes, parceiros e visitantes.</p>
+        <p>Esta Política de Privacidade descreve como coletamos, utilizamos, armazenamos e protegemos suas informações pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD – Lei nº 13.709/2018) e demais legislações aplicáveis.</p>
+        <p>Ao utilizar nossos serviços, incluindo nosso canal de atendimento via WhatsApp, você declara estar ciente e de acordo com as práticas descritas nesta política.</p>
+    </section>
+
+    <section class="section" id="dados-coletados">
+        <h2>2. Dados Coletados</h2>
+        <p>Podemos coletar os seguintes dados pessoais:</p>
+        <h3>Dados fornecidos diretamente por você:</h3>
+        <ul>
+            <li>Nome completo</li>
+            <li>Número de telefone (WhatsApp)</li>
+            <li>Endereço de e-mail</li>
+            <li>CPF ou CNPJ (quando necessário)</li>
+            <li>Endereço</li>
+            <li>Informações sobre produtos ou serviços de interesse</li>
+        </ul>
+        <h3>Dados coletados automaticamente:</h3>
+        <ul>
+            <li>Dados de navegação (endereço IP, tipo de navegador, páginas visitadas)</li>
+            <li>Dados de interação com mensagens enviadas via WhatsApp (status de entrega e leitura)</li>
+            <li>Cookies e tecnologias similares</li>
+        </ul>
+    </section>
+
+    <section class="section" id="uso-dados">
+        <h2>3. Como Utilizamos os Dados</h2>
+        <p>Os dados pessoais coletados são utilizados para as seguintes finalidades:</p>
+        <ul>
+            <li>Prestar atendimento ao cliente e suporte técnico</li>
+            <li>Enviar notificações, confirmações e atualizações sobre pedidos ou serviços</li>
+            <li>Realizar comunicações de marketing e campanhas promocionais (mediante consentimento prévio)</li>
+            <li>Melhorar nossos produtos, serviços e a experiência do usuário</li>
+            <li>Cumprir obrigações legais e regulatórias</li>
+            <li>Garantir a segurança e prevenir fraudes</li>
+        </ul>
+    </section>
+
+    <section class="section" id="whatsapp">
+        <h2>4. Uso do WhatsApp Business API</h2>
+        <div class="highlight-box">
+            <p>Utilizamos a API Oficial do WhatsApp Business (Meta) para nos comunicar com nossos clientes de forma segura, escalável e em conformidade com as políticas da Meta e a legislação brasileira.</p>
+        </div>
+        <p>Ao interagir conosco pelo WhatsApp, você concorda que:</p>
+        <ul>
+            <li>Suas mensagens serão processadas por nossa plataforma de atendimento integrada à API Oficial do WhatsApp;</li>
+            <li>O conteúdo das mensagens é protegido por criptografia de ponta a ponta, conforme os padrões do WhatsApp;</li>
+            <li>Metadados de mensagens (horário de envio, status de entrega) podem ser processados pela Meta conforme sua própria política de privacidade;</li>
+            <li>Armazenamos o histórico de conversas para fins de atendimento, qualidade e registro;</li>
+            <li>Mensagens proativas (notificações, campanhas) serão enviadas apenas mediante seu consentimento prévio (opt-in);</li>
+            <li>Você pode solicitar a exclusão de seus dados ou revogar seu consentimento a qualquer momento.</li>
+        </ul>
+        <p>Nosso uso da API está em conformidade com a <a href="https://www.whatsapp.com/legal/business-policy/" target="_blank" rel="noopener">Política do WhatsApp Business</a> e a <a href="https://www.whatsapp.com/legal/commerce-policy/" target="_blank" rel="noopener">Política Comercial do WhatsApp</a>.</p>
+    </section>
+
+    <section class="section" id="compartilhamento">
+        <h2>5. Compartilhamento de Dados</h2>
+        <p>Seus dados pessoais poderão ser compartilhados com:</p>
+        <ul>
+            <li><strong>Meta Platforms, Inc.:</strong> por meio da WhatsApp Business Platform, para possibilitar a troca de mensagens via API Oficial;</li>
+            <li><strong>Prestadores de serviço:</strong> plataformas de atendimento, CRM e provedores de infraestrutura que nos auxiliam na operação, sob contratos de confidencialidade;</li>
+            <li><strong>Autoridades legais:</strong> quando exigido por lei, regulamento ou ordem judicial.</li>
+        </ul>
+        <p>Não vendemos, alugamos ou compartilhamos seus dados pessoais com terceiros para fins publicitários sem o seu consentimento expresso.</p>
+    </section>
+
+    <section class="section" id="armazenamento">
+        <h2>6. Armazenamento e Segurança</h2>
+        <p>Adotamos medidas técnicas e organizacionais adequadas para proteger seus dados pessoais contra acesso não autorizado, perda, alteração ou destruição, incluindo:</p>
+        <ul>
+            <li>Criptografia de dados em trânsito e em repouso</li>
+            <li>Controle de acesso baseado em função</li>
+            <li>Monitoramento e auditoria de acessos</li>
+            <li>Backups regulares e armazenamento em datacenter seguro</li>
+        </ul>
+        <p>Os dados são armazenados pelo tempo necessário para cumprir as finalidades para as quais foram coletados, ou conforme exigido por lei.</p>
+    </section>
+
+    <section class="section" id="direitos">
+        <h2>7. Seus Direitos (LGPD)</h2>
+        <p>Em conformidade com a LGPD, você tem o direito de:</p>
+        <ul>
+            <li><strong>Confirmação e acesso:</strong> saber se tratamos seus dados e acessar as informações;</li>
+            <li><strong>Correção:</strong> solicitar a correção de dados incompletos, inexatos ou desatualizados;</li>
+            <li><strong>Anonimização, bloqueio ou eliminação:</strong> de dados desnecessários ou tratados em desconformidade;</li>
+            <li><strong>Portabilidade:</strong> solicitar a transferência de seus dados a outro fornecedor;</li>
+            <li><strong>Revogação do consentimento:</strong> retirar seu consentimento a qualquer momento;</li>
+            <li><strong>Oposição:</strong> opor-se ao tratamento quando realizado sem seu consentimento;</li>
+            <li><strong>Eliminação:</strong> solicitar a eliminação dos dados tratados com base no consentimento.</li>
+        </ul>
+        <p>Para exercer qualquer um desses direitos, entre em contato conosco pelos canais indicados na seção "Contato" abaixo.</p>
+    </section>
+
+    <section class="section" id="cookies">
+        <h2>8. Cookies</h2>
+        <p>Nosso site pode utilizar cookies e tecnologias similares para melhorar a experiência de navegação, analisar o tráfego e personalizar conteúdo. Você pode gerenciar suas preferências de cookies através das configurações do seu navegador.</p>
+    </section>
+
+    <section class="section" id="alteracoes">
+        <h2>9. Alterações nesta Política</h2>
+        <p>Esta Política de Privacidade poderá ser atualizada periodicamente para refletir mudanças em nossas práticas ou na legislação vigente. Recomendamos a consulta periódica desta página. A data da última atualização será sempre indicada no topo do documento.</p>
+    </section>
+
+    <section class="section" id="contato">
+        <h2>10. Contato</h2>
+        <p>Para dúvidas, solicitações ou reclamações relacionadas a esta Política de Privacidade ou ao tratamento de seus dados pessoais, entre em contato:</p>
+
+        <div class="contact-card">
+            <h3>Encarregado de Proteção de Dados (DPO)</h3>
+            <div class="contact-item">
+                <div class="icon">🏢</div>
+                <span><strong>INTELIGENTTE LAB LTDA</strong></span>
+            </div>
+            <div class="contact-item">
+                <div class="icon">👤</div>
+                <span>Responsável: <strong>Eduardo Pedrosa</strong></span>
+            </div>
+            <div class="contact-item">
+                <div class="icon">📧</div>
+                <span>E-mail: <strong>equipe@inteligentte.com.br</strong></span>
+            </div>
+            <div class="contact-item">
+                <div class="icon">📱</div>
+                <span>WhatsApp: <strong>+55 (84) 99655-2286</strong></span>
+            </div>
+            <div class="contact-item">
+                <div class="icon">📍</div>
+                <span>Av. Pres. Nilo Peçanha, 614 – Sala 104 – Bessa, João Pessoa – PB, CEP 58035-200</span>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer class="footer">
+    <p>&copy; 2026 <strong>INTELIGENTTE LAB LTDA</strong>. Todos os direitos reservados.</p>
+    <p style="margin-top: 0.5rem;">CNPJ: 65.511.795/0001-48</p>
+</footer>
+
+</body>
+</html>
